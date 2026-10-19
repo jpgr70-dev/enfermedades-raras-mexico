@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "Si usa este código, cítelo como se indica abajo."
+title: "Enfermedades raras en México: código de análisis"
+type: software
+version: "0.1.0"
+date-released: "2026-10-19"
+license: MIT
+# POR COMPLETAR antes de publicar: autoras y autores en el orden del manuscrito, con ORCID si lo tienen.
+authors:
+  - family-names: "POR COMPLETAR"
+    given-names: "POR COMPLETAR"
+# POR COMPLETAR: DOI de Zenodo al archivar la primera versión.
+# doi: "10.5281/zenodo.XXXXXXX"
+preferred-citation:
+  type: article
+  title: "Magnitud y distribución de las enfermedades raras en México: prevalencia estimada y carga hospitalaria, 2014-2024"
+  year: 2026
+  # POR COMPLETAR: revista, volumen y DOI cuando exista.
+  authors:
+    - family-names: "POR COMPLETAR"
+      given-names: "POR COMPLETAR"
