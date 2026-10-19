@@ -1,0 +1,24 @@
+# Sistema y editores
+.DS_Store
+._*
+Thumbs.db
+.Rhistory
+.RData
+.Rproj.user/
+*.Rproj
+
+# Datos y salidas (no se versionan)
+datos/*
+!datos/README.md
+analisis/
+checkpoints*/
+*.RData
+*.rds
+*.zip
+*.dta
+*.dbf
+gadm41_*.json
+*.jpeg
+*.png
+*.xlsx
+!catalogo/*.xlsx
