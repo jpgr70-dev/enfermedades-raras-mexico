@@ -24,7 +24,7 @@ B1 es la corrida pesada (11 años de defunciones y egresos) y la única que nece
 
 ## Estado de verificación
 
-Los análisis completos se corrieron con datos entre el 14 y el 19 de octubre de 2026. Los cambios de entorno posteriores (rutas, carga de sesiones, GADM en caché, corrección del doble conteo de E84.8) se verificaron con `parse()`; la corrida completa de B1 con la versión nueva está en curso de confirmación.
+Los análisis completos (B1 a B4) se corrieron con datos entre el 14 y el 19 de octubre de 2026. El 19 de octubre se corrió B1 completo con la versión de este repositorio (≈9 min, sin errores): la sesión base es idéntica a la de la corrida anterior y el ejercicio ampliado difiere solo por la corrección del doble conteo de E84.8 (cuadrante 6: −637 defunciones y −232 egresos, 2014-2024). Los cambios de entorno de B2 a B4 (rutas, carga de sesiones) se verificaron únicamente con `parse()`; su corrida completa con esta versión queda pendiente.
 
 ## Cómo citar
 
