@@ -12,7 +12,7 @@
 # Lee la sesion guardada por B1 y el archivo de poblacion de CONAPO (poblacion
 # por entidad y anio, igual que la seccion 15ter de B1).
 # Correr en una sesion nueva de R (Windows):
-#   source("E:/jp/enfermedades raras/Datos/analisis/figuras 1 y 2 mapas con claves de entidad 18Oct2026.R",
+#   source("figuras 1 y 2 mapas con claves de entidad 18Oct2026.R",
 #          encoding = "UTF-8", echo = TRUE)
 # NO PROBADO (sin acceso a los datos al escribirlo): si falla, pegar el error.
 # =============================================================================
@@ -25,10 +25,10 @@ if (!exists("datos_path", inherits = TRUE)) {
   if (file.exists("config_rutas.R")) {
     source("config_rutas.R", encoding = "UTF-8")
   } else {
-    # Sin setwd() al paquete: usar ER_DATOS o la ruta del equipo de corrida (E:/...). Para otra
+    # Sin setwd() al paquete: usar la variable de entorno ER_DATOS. Para otra
     # maquina, ajustar config_rutas.R (y hacer setwd() a la carpeta del paquete).
-    datos_path <- Sys.getenv("ER_DATOS", unset = "E:/jp/enfermedades raras/Datos")
-    message("AVISO: no encontre config_rutas.R en ", getwd(), "; uso datos_path = ", datos_path)
+    datos_path <- Sys.getenv("ER_DATOS", unset = "")
+    if (!nzchar(datos_path)) stop("No encontre config_rutas.R en ", getwd(), " y ER_DATOS no esta definida: haz setwd() a la carpeta codigo/ o define ER_DATOS.")
   }
 }
 load(file.path(datos_path, "analisis", "sesion_base_raras.RData"))

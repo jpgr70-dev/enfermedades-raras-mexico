@@ -1,6 +1,6 @@
 # Enfermedades raras en México: código de análisis
 
-Código de replicación del estudio **«Magnitud y distribución de las enfermedades raras en México: prevalencia estimada y carga hospitalaria, 2014-2024»** (CIPPS–CISIDAT). El estudio estima la prevalencia puntual acumulada de las enfermedades raras a partir de Orphanet, describe la distribución geográfica de los egresos hospitalarios y las defunciones por condiciones potencialmente raras (2014-2024) y compara la mortalidad hospitalaria y la estancia de esos egresos con el resto.
+Código de replicación del estudio **«Magnitud y distribución de las enfermedades raras en México: prevalencia estimada y carga hospitalaria, 2014-2024»** (CIPPS–CISIDAT). Repositorio: https://github.com/jpgr70-dev/enfermedades-raras-mexico. El estudio estima la prevalencia puntual acumulada de las enfermedades raras a partir de Orphanet, describe la distribución geográfica de los egresos hospitalarios y las defunciones por condiciones potencialmente raras (2014-2024) y compara la mortalidad hospitalaria y la estancia de esos egresos con el resto.
 
 *English summary.* R code to replicate the estimation of cumulative point prevalence of rare diseases in Mexico from Orphanet (adapted from Nguengang Wakap et al., 2020), the spatial analysis of hospital discharges and deaths with ICD-10 codes that potentially correspond to rare diseases (2014-2024), and the models of in-hospital mortality and length of stay. Raw data are public and are not redistributed here; see `datos/README.md`.
 
@@ -18,17 +18,19 @@ Código de replicación del estudio **«Magnitud y distribución de las enfermed
 1. Obtener los datos (ver `datos/README.md`) y copiarlos a una carpeta de trabajo.
 2. Abrir R en `codigo/` (`setwd("codigo")`) y editar **solo** `config_rutas.R`, o definir la variable de entorno `ER_DATOS` con la ruta de los datos.
 3. Correr `00_prerrequisitos.R`: lista los paquetes de R y los archivos que faltan. No instala nada.
-4. Correr los scripts en el orden de `docs/LEEME_paquete_replicacion 19Oct2026.md`: A (prevalencia) y C (potencialmente raros) son independientes; la línea geográfica es B1 → B2 → B3 → B4; los demás scripts producen tablas y figuras a partir de las sesiones guardadas.
+4. Correr los scripts en el orden de `docs/LEEME_paquete_replicacion.md`: A (prevalencia) y C (potencialmente raros, con la edad corregida) son independientes; la línea geográfica es B1 → B2 → B3 → B4; los scripts de escenarios, tablas y figuras se corren después de C o de B1; `cobertura_SSA_IMB_sobre_Sectorial.R` es independiente.
+
+La ruta de los datos no tiene valor por omisión: hay que definirla en `config_rutas.R` o en la variable de entorno `ER_DATOS`. El script C procesa unos 60 millones de egresos y es la corrida más pesada: los modelos se ajustan sobre una muestra aleatoria de tamaño fijo y semilla fija (el ajuste sobre el universo completo saturó 448 GB de RAM sin avanzar), por lo que el resultado no depende de la memoria del equipo; los conteos y las tasas crudas usan el universo completo.
 
 B1 es la corrida pesada (11 años de defunciones y egresos) y la única que necesita internet, solo la primera vez, para bajar los límites de entidades (GADM 4.1).
 
 ## Estado de verificación
 
-Los análisis completos (B1 a B4) se corrieron con datos entre el 14 y el 19 de octubre de 2026. El 19 de octubre se corrió B1 completo con la versión de este repositorio (≈9 min, sin errores): la sesión base es idéntica a la de la corrida anterior y el ejercicio ampliado difiere solo por la corrección del doble conteo de E84.8 (cuadrante 6: −637 defunciones y −232 egresos, 2014-2024). Los cambios de entorno de B2 a B4 (rutas, carga de sesiones) se verificaron únicamente con `parse()`; su corrida completa con esta versión queda pendiente.
+Los análisis completos (B1 a B4) se corrieron con datos entre el 14 y el 19 de octubre de 2026; C, la tabla 2, los escenarios, las figuras 3 y 4 y la cobertura SSA/IMSS-Bienestar se corrieron entre el 23 y el 24 de octubre de 2026 con la corrección de edad. El 19 de octubre se corrió B1 completo con la versión de este repositorio (≈9 min, sin errores): la sesión base es idéntica a la de la corrida anterior y el ejercicio ampliado difiere solo por la corrección del doble conteo de E84.8 (cuadrante 6: −637 defunciones y −232 egresos, 2014-2024). Los cambios de entorno de B2 a B4 (rutas, carga de sesiones) se verificaron únicamente con `parse()`; su corrida completa con esta versión queda pendiente.
 
 ## Cómo citar
 
-Pendiente: se agregará el DOI de la versión archivada en Zenodo y la referencia del artículo. Mientras tanto, ver `CITATION.cff`.
+Pendiente: se agregará el DOI de la versión archivada en Zenodo y la referencia del artículo. Mientras tanto, ver `CITATION.cff` (repositorio: https://github.com/jpgr70-dev/enfermedades-raras-mexico).
 
 ## Licencia
 

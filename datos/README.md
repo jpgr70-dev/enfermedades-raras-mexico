@@ -1,6 +1,6 @@
 # Datos
 
-Los datos crudos no se incluyen: son públicos, pesados y conservan los términos de uso de cada fuente. Para replicar, descargarlos y copiarlos a la carpeta que se indica en `codigo/config_rutas.R` (`datos_path`). `00_prerrequisitos.R` revisa qué falta.
+Los datos crudos no se incluyen: son públicos, pesados y conservan los términos de uso de cada fuente. Para replicar, descargarlos y copiarlos a una carpeta de trabajo y poner su ruta en `codigo/config_rutas.R` (`datos_path`) o en la variable de entorno `ER_DATOS` (no hay ruta por omisión). `00_prerrequisitos.R` revisa qué falta.
 
 | Archivo o carpeta en `datos_path` | Fuente | Notas |
 |---|---|---|

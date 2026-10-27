@@ -3,8 +3,10 @@ message: "Si usa este código, cítelo como se indica abajo."
 title: "Enfermedades raras en México: código de análisis"
 type: software
 version: "0.1.0"
-date-released: "2026-10-19"
+date-released: "2026-10-26"
 license: MIT
+repository-code: "https://github.com/jpgr70-dev/enfermedades-raras-mexico"
+url: "https://github.com/jpgr70-dev/enfermedades-raras-mexico"
 # POR COMPLETAR antes de publicar: autoras y autores en el orden del manuscrito, con ORCID si lo tienen.
 authors:
   - family-names: "POR COMPLETAR"

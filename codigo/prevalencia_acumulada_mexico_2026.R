@@ -108,10 +108,10 @@ if (!exists("datos_path", inherits = TRUE)) {
   if (file.exists("config_rutas.R")) {
     source("config_rutas.R", encoding = "UTF-8")
   } else {
-    # Sin setwd() al paquete: usar ER_DATOS o la ruta del equipo de corrida (E:/...). Para otra
+    # Sin setwd() al paquete: usar la variable de entorno ER_DATOS. Para otra
     # maquina, ajustar config_rutas.R (y hacer setwd() a la carpeta del paquete).
-    datos_path <- Sys.getenv("ER_DATOS", unset = "E:/jp/enfermedades raras/Datos")
-    message("AVISO: no encontre config_rutas.R en ", getwd(), "; uso datos_path = ", datos_path)
+    datos_path <- Sys.getenv("ER_DATOS", unset = "")
+    if (!nzchar(datos_path)) stop("No encontre config_rutas.R en ", getwd(), " y ER_DATOS no esta definida: haz setwd() a la carpeta codigo/ o define ER_DATOS.")
   }
 }
 
