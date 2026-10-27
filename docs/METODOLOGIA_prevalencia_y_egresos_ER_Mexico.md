@@ -2,7 +2,7 @@
 
 **Para:** colaboradores del manuscrito *"Situación de las enfermedades raras en México"* (versión `…18Oct2026.docx`).
 **Propósito:** explicar qué hace cada script, en qué orden correrlos, qué tabla o figura del paper genera cada uno y qué decisiones metodológicas se tomaron (y por qué). Los scripts muestran el *cómo*; este documento explica el *por qué*.
-**Versión:** 19-oct-2026. Sustituye a la versión del 4-oct-2026 y a `METODOLOGIA_prevalencia_y_egresos_ER_Mexico.md` del 25-sep. Las instrucciones prácticas de corrida están en `LEEME_paquete_replicacion 19Oct2026.md` (carpeta del paquete).
+**Versión:** 19-oct-2026. Sustituye a la versión del 4-oct-2026 y a `METODOLOGIA_prevalencia_y_egresos_ER_Mexico.md` del 25-sep. Las instrucciones prácticas de corrida están en `LEEME_paquete_replicacion.md` (carpeta del paquete).
 
 ---
 
@@ -17,11 +17,11 @@ Todos los scripts están en la carpeta **`Paquete Andres/`**, en UTF-8 y con sal
 | B2 | `analisis geografico adicional.R` | Moran's I global y por cuadrante (mortalidad y egresos Sectorial); LISA | Sesiones de B1 (las carga solo si faltan) | `analisis_geografico_cuadrante_moran.xlsx`, `analisis_geografico_ampliado_moran.xlsx`; guarda `sesion_geografico_extendido.RData` |
 | B3 | `analisis_geografico_extendido_parte2.R` | LISA del cuadrante 3 en mortalidad; Moran/LISA de egresos Sectorial | Sesiones de B1 y B2 (las carga solo) | `analisis_geografico_extension2.xlsx`, `mapa_lisa_*.jpeg` |
 | B4 | `analisis_geografico_ssa_residencia.R` | Sub-análisis SSA/IMSS-Bienestar por residencia | Sesiones de B1 y B2 + `ssa_egresos_AAAA.zip` | `analisis_geografico_ssa_residencia.xlsx` y mapas |
-| C | `analisis_potencialmente_raros_centrado-1.R` | **Tabla 2, Tabla 3 y escenarios de referencia** (deciles de frecuencia, Firth, AME, modelo de propensión) | Independiente | `potencialmente_raros_centrado.xlsx`, `escenarios_referencia_deciles…xlsx`, checkpoints en `analisis/checkpoints_potencialmente_raros` |
-| — | `tabla 2 referencia AN PQ 17Oct2026.R` | Columna «Referencia principal, capítulos A–N, P y Q» (E6b) de la Tabla 2 | Checkpoint de C | `tabla2_referencia_AN_PQ 17Oct2026.xlsx` |
+| C | `analisis_potencialmente_raros_centrado.R` | **Tabla 2, Tabla 3 y escenarios de referencia** (deciles de frecuencia, Firth, AME, modelo de propensión) | Independiente | `potencialmente_raros_centrado.xlsx`, `escenarios_referencia_deciles…xlsx`, checkpoints en `analisis/checkpoints_potencialmente_raros` |
+| — | `tabla2_referencia_AN_PQ.R` | Columna «Referencia principal, capítulos A–N, P y Q» (E6b) de la Tabla 2 | Checkpoint de C | `tabla2_referencia_AN_PQ 23Oct2026.xlsx` |
 | — | `tasas por entidad 2014 y 2024 16Oct2026.R` | Tasas por entidad 2014 y 2024 (texto de Figuras 1 y 2) | Sesión de B1 | `tasas_por_entidad_2014_2024 16Oct2026.xlsx` |
 | — | `figuras 1 y 2 mapas con claves de entidad 18Oct2026.R` | **Figuras 1 y 2** (mapas 2014 vs. 2024 con claves de entidad) | Sesión de B1 | `mapa_egresos_…18Oct2026.jpeg`, `mapa_defunciones_…18Oct2026.jpeg` |
-| — | `figuras 3 y 4 forest plot escenarios 16Oct2026.R` | **Figuras 3 y 4** (forest plot de escenarios) | xlsx de escenarios de C | dos `.jpeg` y un `.xlsx` |
+| — | `figuras_3_y_4_forest_plot_escenarios.R` | **Figuras 3 y 4** (forest plot de escenarios) | xlsx de escenarios de C | dos `.jpeg` y un `.xlsx` |
 
 **Orden de corrida:** A y C son autocontenidos y pueden correrse en cualquier momento. La línea geográfica va en orden **B1 → B2 → B3 → B4**. Los scripts de figuras y de tasas por entidad se corren después de B1 (o de C). B1 es el paso lento, porque lee los 11 años de defunciones y de egresos; B2 a B4 cargan las sesiones `.RData`, así que no hace falta repetir B1 cada vez.
 
