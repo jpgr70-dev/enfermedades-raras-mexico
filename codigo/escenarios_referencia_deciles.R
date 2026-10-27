@@ -1,7 +1,7 @@
 # =============================================================================
 # ESCENARIOS DE GRUPO DE REFERENCIA PARA EL MODELO DE DECILES (comentario M8 de
 # Andrés, 11-oct-2026). Script NUEVO y AUTOCONTENIDO: no modifica
-# analisis_potencialmente_raros_centrado-1.R ni sus checkpoints existentes.
+# analisis_potencialmente_raros_centrado.R ni sus checkpoints existentes.
 #
 # QUÉ HACE
 #  Reutiliza el checkpoint "datos_clasificados" del script C (no vuelve a leer
