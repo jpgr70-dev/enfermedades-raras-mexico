@@ -22,8 +22,7 @@ authors:
   - family-names: "Castañeda-Prado"
     given-names: "Andrés"
     affiliation: "Center for Policy, Population & Health Research, School of Medicine, National Autonomous University of Mexico"
-# POR COMPLETAR al archivar la versión en Zenodo: DOI de la versión (Zenodo lo asigna al publicar el release).
-# doi: "10.5281/zenodo.XXXXXXX"
+doi: "10.5281/zenodo.23983409"
 # POR COMPLETAR cuando el artículo esté aceptado: referencia preferida (Orphanet Journal of Rare Diseases, volumen y DOI).
 # preferred-citation:
 #   type: article

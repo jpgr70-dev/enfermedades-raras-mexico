@@ -30,13 +30,13 @@ El flujo de participantes y el riesgo absoluto del escenario principal (`flujo_p
 
 ## Cómo citar
 
-Pendiente al momento de publicar: el DOI de la versión archivada en Zenodo (se agrega aquí y en `CITATION.cff` cuando exista) y la referencia del artículo cuando esté aceptado. Mientras tanto, ver `CITATION.cff` (GitHub muestra el botón «Cite this repository» a partir de ese archivo).
+Versión archivada v1.0.0 en Zenodo: https://doi.org/10.5281/zenodo.23983409. La referencia del artículo se agregará cuando esté aceptado. Ver también `CITATION.cff` (GitHub muestra el botón «Cite this repository» a partir de ese archivo).
 
 ## Software availability (English)
 
 - **Project name:** enfermedades-raras-mexico
 - **Home page:** https://github.com/jpgr70-dev/enfermedades-raras-mexico
-- **Archived version:** Zenodo, DOI to be added once version v1.0.0 is archived (see `CITATION.cff`)
+- **Archived version:** Zenodo, v1.0.0, https://doi.org/10.5281/zenodo.23983409
 - **Operating system:** platform independent; the analyses were run on Windows
 - **Programming language:** R (packages listed by `codigo/00_prerrequisitos.R`; the flow diagram of the Supplementary figure is drawn with Python/matplotlib, `codigo/figura_S1_flujo_egresos.py`)
 - **Other requirements:** the public data listed in `datos/README.md`; the script of the main model works on about 60 million discharges and needs a computer with ample memory
