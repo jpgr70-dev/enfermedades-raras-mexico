@@ -1,23 +1,32 @@
 cff-version: 1.2.0
-message: "Si usa este código, cítelo como se indica abajo."
-title: "Enfermedades raras en México: código de análisis"
+message: "Si usa este código, cítelo como se indica abajo. / If you use this software, please cite it as below."
+title: "Rare diseases in Mexico: analysis code (Enfermedades raras en México: código de análisis)"
 type: software
-version: "0.1.0"
-date-released: "2026-10-26"
+version: "1.0.0"
+date-released: "2026-11-05"
 license: MIT
 repository-code: "https://github.com/jpgr70-dev/enfermedades-raras-mexico"
 url: "https://github.com/jpgr70-dev/enfermedades-raras-mexico"
-# POR COMPLETAR antes de publicar: autoras y autores en el orden del manuscrito, con ORCID si lo tienen.
+abstract: "R code to estimate the cumulative point prevalence of rare diseases in Mexico from Orphanet, and to analyze the geographic distribution, in-hospital mortality and length of stay of hospital discharges and deaths with ICD-10 codes that potentially correspond to rare diseases, Mexico 2014-2024. Raw data are public and are not redistributed."
+keywords:
+  - rare diseases
+  - Mexico
+  - Orphanet
+  - hospital discharges
+  - R
 authors:
-  - family-names: "POR COMPLETAR"
-    given-names: "POR COMPLETAR"
-# POR COMPLETAR: DOI de Zenodo al archivar la primera versión.
+  - family-names: "Gutiérrez"
+    given-names: "Juan Pablo"
+    orcid: "https://orcid.org/0000-0002-0557-5562"
+    affiliation: "Center for Policy, Population & Health Research, School of Medicine, National Autonomous University of Mexico"
+  - family-names: "Castañeda-Prado"
+    given-names: "Andrés"
+    affiliation: "Center for Policy, Population & Health Research, School of Medicine, National Autonomous University of Mexico"
+# POR COMPLETAR al archivar la versión en Zenodo: DOI de la versión (Zenodo lo asigna al publicar el release).
 # doi: "10.5281/zenodo.XXXXXXX"
-preferred-citation:
-  type: article
-  title: "Magnitud y distribución de las enfermedades raras en México: prevalencia estimada y carga hospitalaria, 2014-2024"
-  year: 2026
-  # POR COMPLETAR: revista, volumen y DOI cuando exista.
-  authors:
-    - family-names: "POR COMPLETAR"
-      given-names: "POR COMPLETAR"
+# POR COMPLETAR cuando el artículo esté aceptado: referencia preferida (Orphanet Journal of Rare Diseases, volumen y DOI).
+# preferred-citation:
+#   type: article
+#   title: "Magnitude and distribution of rare diseases in Mexico: estimated prevalence and hospital burden, 2014-2024"
+#   journal: "Orphanet Journal of Rare Diseases"
+#   year: 2026

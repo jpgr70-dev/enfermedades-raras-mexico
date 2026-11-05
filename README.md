@@ -8,7 +8,7 @@ Código de replicación del estudio **«Magnitud y distribución de las enfermed
 
 | Carpeta | Qué contiene |
 |---|---|
-| `codigo/` | Scripts en R y `config_rutas.R` (única ruta de datos) |
+| `codigo/` | Scripts en R (y un script en Python para el diagrama de flujo) y `config_rutas.R` (única ruta de datos) |
 | `catalogo/` | `cie10 raras_corregido.xlsx`: catálogo de códigos CIE-10 potencialmente raros (mapeo de Orphanet y catálogo complementario de Blazsik et al. 2021; 1,732 códigos únicos, 1,729 tras excluir K74.6, C50.9 y C34.9) |
 | `docs/` | Guía metodológica y LEEME del paquete (orden de corrida, qué produce cada script) |
 | `datos/` | Instrucciones para obtener los datos públicos (no se incluyen) |
@@ -26,11 +26,22 @@ B1 es la corrida pesada (11 años de defunciones y egresos) y la única que nece
 
 ## Estado de verificación
 
-Los análisis completos (B1 a B4) se corrieron con datos entre el 14 y el 19 de octubre de 2026; C, la tabla 2, los escenarios, las figuras 3 y 4 y la cobertura SSA/IMSS-Bienestar se corrieron entre el 23 y el 24 de octubre de 2026 con la corrección de edad. El 19 de octubre se corrió B1 completo con la versión de este repositorio (≈9 min, sin errores): la sesión base es idéntica a la de la corrida anterior y el ejercicio ampliado difiere solo por la corrección del doble conteo de E84.8 (cuadrante 6: −637 defunciones y −232 egresos, 2014-2024). Los cambios de entorno de B2 a B4 (rutas, carga de sesiones) se verificaron únicamente con `parse()`; su corrida completa con esta versión queda pendiente.
+El flujo de participantes y el riesgo absoluto del escenario principal (`flujo_participantes_y_riesgo_absoluto_E6b.R`) se corrieron el 1 de noviembre de 2026 sobre el checkpoint del script C. Los análisis completos (B1 a B4) se corrieron con datos entre el 14 y el 19 de octubre de 2026; C, la tabla 2, los escenarios, las figuras 3 y 4 y la cobertura SSA/IMSS-Bienestar se corrieron entre el 23 y el 24 de octubre de 2026 con la corrección de edad. El 19 de octubre se corrió B1 completo con la versión de este repositorio (≈9 min, sin errores): la sesión base es idéntica a la de la corrida anterior y el ejercicio ampliado difiere solo por la corrección del doble conteo de E84.8 (cuadrante 6: −637 defunciones y −232 egresos, 2014-2024). Los cambios de entorno de B2 a B4 (rutas, carga de sesiones) se verificaron únicamente con `parse()`; su corrida completa con esta versión queda pendiente.
 
 ## Cómo citar
 
-Pendiente: se agregará el DOI de la versión archivada en Zenodo y la referencia del artículo. Mientras tanto, ver `CITATION.cff` (repositorio: https://github.com/jpgr70-dev/enfermedades-raras-mexico).
+Pendiente al momento de publicar: el DOI de la versión archivada en Zenodo (se agrega aquí y en `CITATION.cff` cuando exista) y la referencia del artículo cuando esté aceptado. Mientras tanto, ver `CITATION.cff` (GitHub muestra el botón «Cite this repository» a partir de ese archivo).
+
+## Software availability (English)
+
+- **Project name:** enfermedades-raras-mexico
+- **Home page:** https://github.com/jpgr70-dev/enfermedades-raras-mexico
+- **Archived version:** Zenodo, DOI to be added once version v1.0.0 is archived (see `CITATION.cff`)
+- **Operating system:** platform independent; the analyses were run on Windows
+- **Programming language:** R (packages listed by `codigo/00_prerrequisitos.R`; the flow diagram of the Supplementary figure is drawn with Python/matplotlib, `codigo/figura_S1_flujo_egresos.py`)
+- **Other requirements:** the public data listed in `datos/README.md`; the script of the main model works on about 60 million discharges and needs a computer with ample memory
+- **License:** MIT (code) and CC BY 4.0 (documentation in `docs/`)
+- **Restrictions for non-academic use:** none from this repository; the data keep the terms of use of their sources
 
 ## Licencia
 
