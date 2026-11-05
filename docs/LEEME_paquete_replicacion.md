@@ -22,9 +22,11 @@ Versión 26-oct-2026 (actualiza la versión del 19-oct, que respondía al coment
 | — | `escenarios_referencia_deciles.R` | escenarios E1 (referencia restringida + deciles 9–10) a E6b; xlsx de escenarios | checkpoints de C (`datos_clasificados`); ~1 a 1.5 h |
 | — | `tabla2_referencia_AN_PQ.R` | columna de referencia A–N+P+Q de la Tabla 2 | checkpoint de C |
 | — | `tasas por entidad 2014 y 2024 16Oct2026.R` | tasas por entidad (texto de Figuras 1–2) | sesión de B1 |
-| — | `figuras 1 y 2 mapas con claves de entidad 18Oct2026.R` | Figuras 1 y 2 | sesión de B1 |
-| — | `figuras_3_y_4_forest_plot_escenarios.R` | Figuras 3 y 4 (razón de momios y de estancia por escenario) | xlsx de escenarios |
+| — | `figuras_1_y_2_mapas_con_claves_de_entidad.R` | Figuras 1 y 2 (opción `idioma <- "en"` para etiquetas en inglés) | sesión de B1 |
+| — | `figuras_3_y_4_forest_plot_escenarios.R` | Figuras 3 y 4 (razón de momios y de estancia por escenario; opción `idioma <- "en"`) | xlsx de escenarios |
 | — | `cobertura_SSA_IMB_sobre_Sectorial.R` | cobertura de la base SSA/IMSS-Bienestar sobre la base Sectorial, por año, total y enfermedades raras (44.0%–53.1% total; 37.7%–46.9% raras, 2014-2023) | independiente (bases crudas de egresos) |
+| — | `flujo_participantes_y_riesgo_absoluto_E6b.R` | flujo de egresos (RECORD 13) y riesgo absoluto, diferencia y razón de riesgos del escenario E6b (estandarización marginal; Archivo adicional 2 y texto de Resultados) | checkpoint `datos_clasificados` de C (5 a 15 min) |
+| — | `figura_S1_flujo_egresos.py` | diagrama de flujo (Archivo adicional 2; Python/matplotlib) | cifras de la salida del script anterior |
 
 Orden: A, C y la cobertura son independientes; la línea geográfica es **B1 → B2 → B3 → B4**; los scripts «—» van después de B1 o C según la columna «Depende de» (los escenarios van después de C, y las figuras 3 y 4 después de los escenarios).
 
